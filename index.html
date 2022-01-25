@@ -1,219 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-    crossorigin="anonymous"
-  />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-    rel="stylesheet"
-  />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Day Planner</title>
-</head>
-<header class="jumbotron jumbotron-fluid custom-jumbotron">
+  </head>
+  <header class="jumbotron jumbotron-fluid custom-jumbotron">
     <div class="container text-center">
-    <h1>Day Planner</h1>
-    <h2>Time to plan your day!</h2>
-    <h3>Current Time &amp; Date: <br /> <span id="time-display">00:00:00</span></h3>
+      <h1>Day Planner</h1>
+      <h2>Time to plan your day!</h2>
+      <h3>
+        Current Time &amp; Date: <br />
+        <span id="time-display">00:00:00</span>
+      </h3>
     </div>
-</header>
-<body>
+  </header>
+  <body>
     <main class="container fluid">
-        <div id="time-block0" class="row hour-segment">
-            <div class="col-1 hour">12 am</div>
-            <textarea name="text-area-block" id ="text-block0" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block0-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block1" class="row hour-segment">
-            <div class="col-1 hour">1 am</div>
-        <textarea name="text-area-block" id ="text-block1" 
-        class ="col-10 description"></textarea>
-        <button class="col-1 saveBtn" 
-        id="text-block1-save"><i class="far fa-save"></i></button>
-        </div>
-
-        <div id="time-block2" class="row hour-segment">
-            <div class="col-1 hour">2 am</div>
-            <textarea name="text-area-block" id ="text-block2" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block2-save"><i class="far fa-save"></i></button>
-            </div>
-    
-        <div id="time-block3" class="row hour-segment">
-            <div class="col-1 hour">3 am</div>
-            <textarea name="text-area-block" id ="text-block3" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block3-save"><i class="far fa-save"></i></button>
-            </div>
-    
-        <div id="time-block4" class="row hour-segment">
-            <div class="col-1 hour">4 am</div>
-            <textarea name="text-area-block" id ="text-block4" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block4-save"><i class="far fa-save"></i></button>
-            </div>
-        
-        <div id="time-block5" class="row hour-segment">
-            <div class="col-1 hour">5 am</div>
-            <textarea name="text-area-block" id ="text-block5" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block5-save"><i class="far fa-save"></i></button>
-            </div>
-        
-        <div id="time-block6" class="row hour-segment">
-            <div class="col-1 hour">6 am</div>
-            <textarea name="text-area-block" id ="text-block6" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block6-save"><i class="far fa-save"></i></button>
-            </div>
-        
-        <div id="time-block7" class="row hour-segment">
-            <div class="col-1 hour">7 am</div>
-            <textarea name="text-area-block" id ="text-block7" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block7-save"><i class="far fa-save"></i></button>
-            </div>
-
-        <div id="time-block8" class="row hour-segment">
-            <div class="col-1 hour">8 am</div>
-            <textarea name="text-area-block" id ="text-block8" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block8-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block9" class="row hour-segment">
-            <div class="col-1 hour">9 am</div>
-            <textarea name="text-area-block" id ="text-block9" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block7-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block10" class="row hour-segment">
-            <div class="col-1 hour">10 am</div>
-            <textarea name="text-area-block" id ="text-block10" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block10-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block11" class="row hour-segment">
-            <div class="col-1 hour">11 am</div>
-            <textarea name="text-area-block" id ="text-block11" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block11-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block12" class="row hour-segment">
-            <div class="col-1 hour">12 pm</div>
-            <textarea name="text-area-block" id ="text-block12" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block12-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block13" class="row hour-segment">
-            <div class="col-1 hour">1 pm</div>
-            <textarea name="text-area-block" id ="text-block13" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block13-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block14" class="row hour-segment">
-            <div class="col-1 hour">2 pm</div>
-            <textarea name="text-area-block" id ="text-block14" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block14-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block15" class="row hour-segment">
-            <div class="col-1 hour">3 pm</div>
-            <textarea name="text-area-block" id ="text-block15" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block15-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block16" class="row hour-segment">
-            <div class="col-1 hour">4 pm</div>
-            <textarea name="text-area-block" id ="text-block16" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block16-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block17" class="row hour-segment">
-            <div class="col-1 hour">5 pm</div>
-            <textarea name="text-area-block" id ="text-block17" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block17-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block18" class="row hour-segment">
-            <div class="col-1 hour">6 pm</div>
-            <textarea name="text-area-block" id ="text-block18" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block18-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block19" class="row hour-segment">
-            <div class="col-1 hour">7 pm</div>
-            <textarea name="text-area-block" id ="text-block19" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block19-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block20" class="row hour-segment">
-            <div class="col-1 hour">8 pm</div>
-            <textarea name="text-area-block" id ="text-block20" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block20-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block21" class="row hour-segment">
-            <div class="col-1 hour">9 pm</div>
-            <textarea name="text-area-block" id ="text-block21" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block21-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block22" class="row hour-segment">
-            <div class="col-1 hour">10 pm</div>
-            <textarea name="text-area-block" id ="text-block22" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block22-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block22" class="row hour-segment">
-            <div class="col-1 hour">11 pm</div>
-            <textarea name="text-area-block" id ="text-block22" 
-            class ="col-10 description"></textarea>
-            <button class="col-1 saveBtn" 
-            id="text-block22-save"><i class="far fa-save"></i></button>
-            </div>
-        <div id="time-block23" class="row hour-segment">
+      <div id="hour-9" class="row time-segment">
+        <div class="col-1 hour">9 am</div>
+        <textarea
+          name="text-area-block"
+          id="text-block9"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block7-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-10" class="row hour-segment">
+        <div class="col-1 hour">10 am</div>
+        <textarea
+          name="text-area-block"
+          id="text-block10"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block10-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-11" class="row hour-segment">
+        <div class="col-1 hour">11 am</div>
+        <textarea
+          name="text-area-block"
+          id="text-block11"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block11-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-12" class="row hour-segment">
+        <div class="col-1 hour">12 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block12"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block12-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-13" class="row hour-segment">
+        <div class="col-1 hour">1 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block13"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block13-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-14" class="row hour-segment">
+        <div class="col-1 hour">2 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block14"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block14-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-15" class="row hour-segment">
+        <div class="col-1 hour">3 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block15"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block15-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-16" class="row hour-segment">
+        <div class="col-1 hour">4 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block16"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block16-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
+      <div id="hour-17" class="row hour-segment">
+        <div class="col-1 hour">5 pm</div>
+        <textarea
+          name="text-area-block"
+          id="text-block17"
+          class="col-10 description"
+        ></textarea>
+        <button class="col-1 saveBtn" id="text-block17-save">
+          <i class="far fa-save"></i>
+        </button>
+      </div>
     </main>
-    
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>

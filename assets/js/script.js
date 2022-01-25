@@ -1,23 +1,40 @@
 var timeDisplayID = $("#time-display");
-var currentTime
+var currentDate;
+var currentTime;
+var temp;
 
-function displayTime(){
-    var currentTime = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-    timeDisplayID.text(currentTime);
-    console.log(currentTime);
+function displayTime() {
+  currentDate = moment().format("MMM DD, YYYY [at] hh:mm:ss a");
+  timeDisplayID.text(currentDate);
 }
 setInterval(displayTime, 1000);
 
-//if a segment is in past color it grey
-//present color it green
-//future blue
-//time blocks 9-5 =9
-function generateTimeBlock(){
-    const timeBlock = ({timeBlockId}, {hour}, ) =>
-    `<div id="time-block${timeBlockId}" class="row hour-segment">
-    <div class="col-1 hour">${hourText}</div>
-    <textarea name="text-area-block" id ="text-block0" class ="col-10 description"></textarea>
-    <button class="col-1 saveBtn" 
-    id="text-block0-save"><i class="far fa-save"></i></button>
-    </div>`;
+function clickBtn() {
+  var btn = $(this);
+  var blockEl = btn.parent();
+  var inputEl = blockEl.find("textarea");
+  var inputValue = inputEl[0].value;
+  var hour = blockEl.attr("id");
+  localStorage.setItem(hour, inputValue);
 }
+var currentHour = moment().format("H")
+console.log(currentHour);
+for (var hour = 9; hour < 18; hour++) {
+  var blockEl = $("#hour-" + hour);
+  var inputEl = blockEl.find("textarea");
+  if(hour == currentHour) {
+    console.log("Present Time", currentHour);
+    inputEl[0].style.backgroundColor = "lightblue";
+  }
+  else if(hour < currentHour) {
+    console.log("Past Time");
+    inputEl[0].style.backgroundColor = "lightcoral";
+  }
+  else{
+    console.log("Future Time");
+    inputEl[0].style.backgroundColor = "lightgreen";
+  }
+  inputEl[0].value = localStorage.getItem("hour-" + hour);
+}
+
+$(".saveBtn").on("click", clickBtn);
